@@ -8,8 +8,16 @@ const routes = [
     ]
   },
 
+  {
+    path: '/home',
+    component: () => import('pages/home.vue'),
+    // children: [
+    //   { path: '', component: () => import('pages/home.vue') }
+    // ]
+  },
+
   // Always leave this as last one,
-  // but you can also remove it
+  // but you can also
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue')
